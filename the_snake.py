@@ -60,7 +60,7 @@ class GameObject:
 
     def draw(self, surface):
         """Отрисовка объекта. Переопределяется в дочерних классах."""
-        raise NotImplementedError("draw нужно переопределить в подклассе.")
+        raise NotImplementedError('draw нужно переопределить в подклассе.')
 
 
 class Apple(GameObject):
