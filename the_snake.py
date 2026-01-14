@@ -136,7 +136,9 @@ class Snake(GameObject):
         positions_list.insert(0, new_head)
 
         #  вместо большого кода сделан тернарный оператор
-        self.last = positions_list.pop() if len(positions_list) > self.length else None
+        self.last = (
+            positions_list.pop() if len(positions_list) > self.length else None
+        )
 
         self.positions = tuple(positions_list)
 
@@ -150,7 +152,9 @@ class Snake(GameObject):
         # добавляем _draw_cell в метод draw
         for position_index, position in enumerate(self.positions):
             # используем константу цвета головы вместо литерала
-            color = SNAKE_HEAD_COLOR if position_index == 0 else self.body_color
+            color = (
+                SNAKE_HEAD_COLOR if position_index == 0 else self.body_color
+            )
             self._draw_cell(surface, position, color)
 
         if self.last:
