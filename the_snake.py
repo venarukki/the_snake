@@ -213,9 +213,7 @@ def main():
 
         # 2. Обработка: обновление состояния игры
         # 2.1 Обновление направления
-        if snake.next_direction:
-            snake.update_direction(snake.next_direction)
-            snake.next_direction = None
+        snake.update_direction(snake.next_direction)
 
         # 2.2 Движение змейки
         snake.move()
